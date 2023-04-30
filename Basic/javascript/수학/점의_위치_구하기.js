@@ -23,21 +23,26 @@
 // 입출력 예 #2
 // dot이 [-7, 9]로 x 좌표가 음수, y 좌표가 양수이므로 제 2 사분면에 속합니다. 따라서 2를 return 합니다.
 
+// const solution = dot => {
+//   let answer = 0;
+//   if (dot[0] > 0 && dot[1] > 0) {
+//       answer = 1;
+//   } else if (dot[0] < 0 && dot[1] > 0) {
+//       answer = 2;
+//   } else if (dot[0] < 0 && dot[1] < 0) {
+//       answer = 3;
+//   } else if (dot[0] > 0 && dot[1] < 0) {
+//       answer = 4;
+//   };
+//   return answer;
+// };
+
 const solution = dot => {
-
-  let answer = 0;
-
-  if (dot[0] > 0 && dot[1] > 0) {
-      answer = 1;
-  } else if (dot[0] < 0 && dot[1] > 0) {
-      answer = 2;
-  } else if (dot[0] < 0 && dot[1] < 0) {
-      answer = 3;
-  } else if (dot[0] > 0 && dot[1] < 0) {
-      answer = 4;
-  };
-  return answer;
+  let [num,num2] = dot;
+  let check = num * num2 > 0;
+  return num > 0 ? (check ? 1 : 4) : (check ? 3 : 2);
 };
+
 
 console.log( solution([2, 4]) );
 console.log( solution([-7, 9]) );
