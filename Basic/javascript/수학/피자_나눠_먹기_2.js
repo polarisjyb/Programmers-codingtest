@@ -20,8 +20,8 @@
 const solution = n => {
   let answer = 1;
 
-  while ( (answer * 6) % n !== 0 ) {
-      answer ++;
+  while ( answer * 6 % n ) {
+      answer += 1;
   };
   
   return answer;
