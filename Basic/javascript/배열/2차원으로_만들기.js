@@ -31,3 +31,6 @@ const solution = (num_list, n) => {
 
   return answer;
 };
+
+console.log( solution([1, 2, 3, 4, 5, 6, 7, 8], 2) );
+console.log( solution([100, 95, 2, 4, 5, 6, 18, 33, 948], 3) );
